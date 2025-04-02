@@ -91,16 +91,20 @@
 		],
 		"parameters": {
 			"pp_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "dkdata1"
 			},
 			"pp_ipfolder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project1/input"
 			},
 			"pp_opflder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project1/output"
 			},
 			"pp_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTProduct.txt"
 			}
 		},
 		"folder": {
