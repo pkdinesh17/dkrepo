@@ -36,7 +36,14 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
@@ -82,6 +89,20 @@
 				}
 			}
 		],
+		"parameters": {
+			"pp_container": {
+				"type": "string",
+				"defaultValue": "dkdata1"
+			},
+			"pp_input": {
+				"type": "string",
+				"defaultValue": "input"
+			},
+			"pp_output": {
+				"type": "string",
+				"defaultValue": "output"
+			}
+		},
 		"folder": {
 			"name": "DKPipeline1"
 		},
