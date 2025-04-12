@@ -5,6 +5,8 @@
 			{
 				"name": "copyipop",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -91,6 +93,8 @@
 			{
 				"name": "copyoptoarchive",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "copyipop",
@@ -184,6 +188,8 @@
 			{
 				"name": "ipDelete1",
 				"type": "Delete",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "copyoptoarchive",
