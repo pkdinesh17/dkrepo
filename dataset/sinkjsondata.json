@@ -1,0 +1,19 @@
+{
+	"name": "sinkjsondata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "project1/output",
+				"fileSystem": "dkdata1"
+			}
+		},
+		"schema": {}
+	}
+}
