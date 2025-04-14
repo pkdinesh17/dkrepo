@@ -153,14 +153,31 @@
 								"value": "@pipeline().parameters.pp_opfolder",
 								"type": "Expression"
 							},
-							"ds_filename": "Address.txt"
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							}
 						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "param_dataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_directory": {
+								"value": "@pipeline().parameters.pp_archive",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -203,7 +220,7 @@
 			},
 			"pp_filename": {
 				"type": "string",
-				"defaultValue": "SalesLTProduct.txt"
+				"defaultValue": "Address.txt"
 			},
 			"pp_archive": {
 				"type": "string",
