@@ -100,7 +100,7 @@
 			},
 			"pp_opfolder": {
 				"type": "string",
-				"defaultValue": "project1/ouput"
+				"defaultValue": "project1/output"
 			},
 			"pp_filename": {
 				"type": "string",
