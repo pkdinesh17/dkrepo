@@ -51,6 +51,20 @@
 				]
 			}
 		],
+		"parameters": {
+			"pp_container": {
+				"type": "string"
+			},
+			"pp_ipfolder": {
+				"type": "string"
+			},
+			"pp_opfolder": {
+				"type": "string"
+			},
+			"pp_filename": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "DKPipeline1"
 		},
