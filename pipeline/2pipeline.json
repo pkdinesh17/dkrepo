@@ -39,7 +39,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "sourcedataset",
+						"referenceName": "param_dataset",
 						"type": "DatasetReference"
 					}
 				],
