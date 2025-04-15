@@ -99,19 +99,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "param_dataset",
+									"referenceName": "DelimitedText1",
 									"type": "DatasetReference",
 									"parameters": {
-										"ds_container": {
+										"": {
 											"value": "@pipeline().parameters.pp_container",
-											"type": "Expression"
-										},
-										"ds_directory": {
-											"value": "@pipeline().parameters.pp_input",
-											"type": "Expression"
-										},
-										"ds_filename": {
-											"value": "@item().name",
 											"type": "Expression"
 										}
 									}
@@ -119,22 +111,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "param_dataset",
-									"type": "DatasetReference",
-									"parameters": {
-										"ds_container": {
-											"value": "@pipeline().parameters.pp_container",
-											"type": "Expression"
-										},
-										"ds_directory": {
-											"value": "@pipeline().parameters.pp_output",
-											"type": "Expression"
-										},
-										"ds_filename": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DelimitedText1",
+									"type": "DatasetReference"
 								}
 							]
 						}
