@@ -145,7 +145,7 @@
 		"parameters": {
 			"pp_container": {
 				"type": "string",
-				"defaultValue": " dkdata1"
+				"defaultValue": "dkdata1"
 			},
 			"pp_input": {
 				"type": "string",
