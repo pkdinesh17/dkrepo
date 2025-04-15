@@ -149,7 +149,7 @@
 			},
 			"pp_input": {
 				"type": "string",
-				"defaultValue": "projecit1/nput"
+				"defaultValue": "project1/nput"
 			},
 			"pp_output": {
 				"type": "string",
