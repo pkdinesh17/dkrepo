@@ -7,13 +7,16 @@
 		},
 		"parameters": {
 			"ds_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "dkdata1"
 			},
 			"ds_directory": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project1 "
 			},
 			"ds_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": " input"
 			}
 		},
 		"annotations": [],
