@@ -110,11 +110,11 @@
 			},
 			"pp_input": {
 				"type": "string",
-				"defaultValue": "input"
+				"defaultValue": "projecit1/nput"
 			},
 			"pp_output": {
 				"type": "string",
-				"defaultValue": "output"
+				"defaultValue": "project1/output"
 			}
 		},
 		"folder": {
