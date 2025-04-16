@@ -51,42 +51,75 @@
 						"value": "@activity('Filter1').output.value",
 						"type": "Expression"
 					},
-					"isSequential": false,
+					"isSequential": true,
 					"activities": [
 						{
-							"name": "Execute Pipeline1",
-							"type": "ExecutePipeline",
+							"name": "Copy data1",
+							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
 								"secureInput": false
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"pipeline": {
-									"referenceName": "pipeline1",
-									"type": "PipelineReference"
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
 								},
-								"waitOnCompletion": true,
-								"parameters": {
-									"pp_container": {
-										"value": "@pipeline().parameters.pp_container",
-										"type": "Expression"
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
 									},
-									"pp_ipfolder": {
-										"value": "@pipeline().parameters.pp_input",
-										"type": "Expression"
-									},
-									"pp_opflder": {
-										"value": "@pipeline().parameters.pp_output",
-										"type": "Expression"
-									},
-									"pp_filename": {
-										"value": "@item().name",
-										"type": "Expression"
-									},
-									"pp_archive": "archive"
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
 								}
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "param_dataset",
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_container": "dkdata1",
+										"ds_directory": "project1 ",
+										"ds_filename": " input"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "param_dataset",
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_container": "dkdata1",
+										"ds_directory": "project1 ",
+										"ds_filename": "output"
+									}
+								}
+							]
 						}
 					]
 				}
