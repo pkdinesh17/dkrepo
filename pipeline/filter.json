@@ -1,0 +1,137 @@
+{
+	"name": "filter",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "getmetadata",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"childItems",
+						"itemName",
+						"itemType"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Filter1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Filter1').output",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Execute Pipeline1",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "pipeline1",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"pp_container": {
+										"value": "@pipeline().parameters.pp_container",
+										"type": "Expression"
+									},
+									"pp_ipfolder": {
+										"value": "@pipeline().parameters.pp_input",
+										"type": "Expression"
+									},
+									"pp_opflder": {
+										"value": "@pipeline().parameters.pp_output",
+										"type": "Expression"
+									},
+									"pp_filename": {
+										"value": "@item().name",
+										"type": "Expression"
+									},
+									"pp_archive": "archive"
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@endswith(item().name,'.txt')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"pp_container": {
+				"type": "string",
+				"defaultValue": "dkdata1"
+			},
+			"pp_input": {
+				"type": "string",
+				"defaultValue": "project1/input"
+			},
+			"pp_output": {
+				"type": "string",
+				"defaultValue": "project1/output"
+			}
+		},
+		"folder": {
+			"name": "DKPipeline1"
+		},
+		"annotations": []
+	}
+}
