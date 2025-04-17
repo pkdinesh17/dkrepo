@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "project1/input",
+				"folderPath": "project1/output/xls",
 				"fileSystem": "dkdata1"
 			},
 			"columnDelimiter": ",",
