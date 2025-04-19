@@ -249,7 +249,7 @@
 			},
 			"pp_archive": {
 				"type": "string",
-				"defaultValue": " project1 / archive"
+				"defaultValue": "project1/archive"
 			}
 		},
 		"folder": {
