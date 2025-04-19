@@ -124,7 +124,10 @@
 										"outputs": [
 											{
 												"referenceName": "DelimitedText2",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"p_filename": "xls"
+												}
 											}
 										]
 									}
@@ -190,7 +193,10 @@
 										"outputs": [
 											{
 												"referenceName": "Optxt",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"P_sinkfilename": "txt"
+												}
 											}
 										]
 									}
