@@ -247,7 +247,7 @@
 			},
 			"pp_filename": {
 				"type": "string",
-				"defaultValue": "''*\""
+				"defaultValue": "'*'"
 			},
 			"pp_archive": {
 				"type": "string",
