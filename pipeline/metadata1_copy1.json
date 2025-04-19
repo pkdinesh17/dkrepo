@@ -104,6 +104,10 @@
 			"pp_output": {
 				"type": "string",
 				"defaultValue": "project1/output"
+			},
+			"pp_archive": {
+				"type": "string",
+				"defaultValue": "project1/archive"
 			}
 		},
 		"folder": {
