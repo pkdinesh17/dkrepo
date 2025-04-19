@@ -246,7 +246,8 @@
 				"defaultValue": "project1/output"
 			},
 			"pp_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "''*\""
 			},
 			"pp_archive": {
 				"type": "string",
