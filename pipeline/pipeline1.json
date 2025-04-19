@@ -91,6 +91,8 @@
 			{
 				"name": "copyoptoarchive",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "copyipop",
@@ -184,6 +186,8 @@
 			{
 				"name": "ipDelete1",
 				"type": "Delete",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "copyoptoarchive",
