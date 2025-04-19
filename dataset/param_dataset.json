@@ -16,7 +16,7 @@
 			},
 			"ds_filename": {
 				"type": "string",
-				"defaultValue": " input"
+				"defaultValue": "output"
 			}
 		},
 		"annotations": [],
