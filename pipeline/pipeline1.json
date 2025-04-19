@@ -246,8 +246,7 @@
 				"defaultValue": "project1/output"
 			},
 			"pp_filename": {
-				"type": "string",
-				"defaultValue": "SalesLTProduct.txt"
+				"type": "string"
 			},
 			"pp_archive": {
 				"type": "string",
