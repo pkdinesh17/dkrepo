@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().P_sinkfilename",
+					"type": "Expression"
+				},
 				"folderPath": "project1/output/txt",
 				"fileSystem": "dkdata1"
 			},
