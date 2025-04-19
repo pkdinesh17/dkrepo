@@ -123,11 +123,8 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "DelimitedText2",
-												"type": "DatasetReference",
-												"parameters": {
-													"p_filename": "xls"
-												}
+												"referenceName": "xlsop",
+												"type": "DatasetReference"
 											}
 										]
 									}
