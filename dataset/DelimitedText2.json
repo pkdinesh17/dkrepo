@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "*.txt",
 				"folderPath": "project1/input",
 				"fileSystem": "dkdata1"
 			},
