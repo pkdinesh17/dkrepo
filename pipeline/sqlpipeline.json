@@ -1,0 +1,9 @@
+{
+	"name": "sqlpipeline",
+	"properties": {
+		"folder": {
+			"name": "DKPipeline1"
+		},
+		"annotations": []
+	}
+}
