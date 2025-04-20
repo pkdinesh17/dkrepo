@@ -157,8 +157,14 @@
 												"referenceName": "param_dataset",
 												"type": "DatasetReference",
 												"parameters": {
-													"ds_container": "dkdata1",
-													"ds_directory": "project1 ",
+													"ds_container": {
+														"value": "@pipeline().parameters.pp_container",
+														"type": "Expression"
+													},
+													"ds_directory": {
+														"value": "@pipeline().parameters.pp_input",
+														"type": "Expression"
+													},
 													"ds_filename": {
 														"value": "@item().name",
 														"type": "Expression"
@@ -171,8 +177,14 @@
 												"referenceName": "param_dataset",
 												"type": "DatasetReference",
 												"parameters": {
-													"ds_container": "dkdata1",
-													"ds_directory": "project1 / output / txt",
+													"ds_container": {
+														"value": "@pipeline().parameters.pp_container",
+														"type": "Expression"
+													},
+													"ds_directory": {
+														"value": "@pipeline().parameters.pp_output",
+														"type": "Expression"
+													},
 													"ds_filename": {
 														"value": "@item().name",
 														"type": "Expression"
