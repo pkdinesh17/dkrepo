@@ -99,15 +99,7 @@
 													"fileExtension": ".txt"
 												}
 											},
-											"enableStaging": false,
-											"translator": {
-												"type": "TabularTranslator",
-												"typeConversion": true,
-												"typeConversionSettings": {
-													"allowDataTruncation": true,
-													"treatBooleanAsNumber": false
-												}
-											}
+											"enableStaging": false
 										},
 										"inputs": [
 											{
@@ -119,12 +111,6 @@
 														"type": "Expression"
 													}
 												}
-											}
-										],
-										"outputs": [
-											{
-												"referenceName": "xlsop",
-												"type": "DatasetReference"
 											}
 										]
 									}
@@ -143,59 +129,8 @@
 										},
 										"userProperties": [],
 										"typeProperties": {
-											"source": {
-												"type": "DelimitedTextSource",
-												"storeSettings": {
-													"type": "AzureBlobFSReadSettings",
-													"recursive": true,
-													"enablePartitionDiscovery": false
-												},
-												"formatSettings": {
-													"type": "DelimitedTextReadSettings"
-												}
-											},
-											"sink": {
-												"type": "DelimitedTextSink",
-												"storeSettings": {
-													"type": "AzureBlobFSWriteSettings"
-												},
-												"formatSettings": {
-													"type": "DelimitedTextWriteSettings",
-													"quoteAllText": true,
-													"fileExtension": ".txt"
-												}
-											},
-											"enableStaging": false,
-											"translator": {
-												"type": "TabularTranslator",
-												"typeConversion": true,
-												"typeConversionSettings": {
-													"allowDataTruncation": true,
-													"treatBooleanAsNumber": false
-												}
-											}
-										},
-										"inputs": [
-											{
-												"referenceName": "DelimitedText2",
-												"type": "DatasetReference",
-												"parameters": {
-													"p_filename": {
-														"value": "@endswith(item().name,'txt')",
-														"type": "Expression"
-													}
-												}
-											}
-										],
-										"outputs": [
-											{
-												"referenceName": "Optxt",
-												"type": "DatasetReference",
-												"parameters": {
-													"P_sinkfilename": "txt"
-												}
-											}
-										]
+											"enableStaging": false
+										}
 									}
 								]
 							}
