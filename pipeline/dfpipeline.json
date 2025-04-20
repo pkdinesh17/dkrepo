@@ -1,0 +1,9 @@
+{
+	"name": "dfpipeline",
+	"properties": {
+		"folder": {
+			"name": "DKPipeline1"
+		},
+		"annotations": []
+	}
+}
