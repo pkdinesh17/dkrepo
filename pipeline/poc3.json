@@ -96,7 +96,7 @@
 		"parameters": {
 			"filename": {
 				"type": "String",
-				"defaultValue": "*"
+				"defaultValue": "project1/input"
 			}
 		},
 		"folder": {
