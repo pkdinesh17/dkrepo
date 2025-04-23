@@ -33,7 +33,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive({ProductID     Name     ProductNumber     Color     StandardCost     ListPrice     Size     Weight     ProductCategoryID     ProductModelID     SellStartDate     SellEndDate     DiscontinuedDate     ThumbNailPhoto     ThumbnailPhotoFileName     rowguid     ModifiedDate} = if(isNull(weight), toFloat(0), toFloat(weight))) ~> derivedColumn1",
+				"source1 derive({ProductID     Name     ProductNumber     Color     StandardCost     ListPrice     Size     Weight     ProductCategoryID     ProductModelID     SellStartDate     SellEndDate     DiscontinuedDate     ThumbNailPhoto     ThumbnailPhotoFileName     rowguid     ModifiedDate} = ERROR_FUNCTION('')) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
