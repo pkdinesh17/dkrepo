@@ -15,10 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().ppfilename",
-					"type": "Expression"
-				},
+				"fileName": "SalesLTCustomer.txt",
 				"folderPath": "project1/input",
 				"fileSystem": "dkdata1"
 			},
