@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "RSalesLTProduct.txt",
-				"folderPath": "project1/input",
+				"folderPath": "project1/output",
 				"fileSystem": "dkdata1"
 			},
 			"columnDelimiter": "\t",
