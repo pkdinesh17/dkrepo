@@ -97,6 +97,18 @@
 			"filename": {
 				"type": "String",
 				"defaultValue": "project1/input"
+			},
+			"container": {
+				"type": "string",
+				"defaultValue": "dkdata1"
+			},
+			"opflder": {
+				"type": "string",
+				"defaultValue": "project1/output"
+			},
+			"ipfolder": {
+				"type": "string",
+				"defaultValue": "project1/input"
 			}
 		},
 		"folder": {
