@@ -74,7 +74,13 @@
 				"inputs": [
 					{
 						"referenceName": "poc3copysource",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ppfilename": {
+								"value": "@pipeline().parameters.filename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -85,6 +91,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"filename": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "DKPipeline1"
 		},
