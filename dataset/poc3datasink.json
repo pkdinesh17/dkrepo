@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "RSalesLtProduct.txt",
 				"folderPath": "project1/output",
 				"fileSystem": "dkdata1"
 			},
