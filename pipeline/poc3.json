@@ -215,8 +215,7 @@
 		],
 		"parameters": {
 			"filename": {
-				"type": "String",
-				"defaultValue": "SalesLTAddress.txt"
+				"type": "String"
 			},
 			"container": {
 				"type": "string",
