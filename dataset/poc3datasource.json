@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SalesLTCustomer.txt",
+				"fileName": "SalesLTProduct.txt",
 				"folderPath": "project1/input",
 				"fileSystem": "dkdata1"
 			},
