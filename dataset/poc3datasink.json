@@ -14,7 +14,7 @@
 				"folderPath": "project1/output",
 				"fileSystem": "dkdata1"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "\t",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
