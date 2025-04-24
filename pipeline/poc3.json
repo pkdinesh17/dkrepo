@@ -175,6 +175,9 @@
 			"ipfolder": {
 				"type": "string",
 				"defaultValue": "project1/input"
+			},
+			"filename": {
+				"type": "string"
 			}
 		},
 		"folder": {
