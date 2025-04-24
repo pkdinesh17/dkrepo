@@ -71,7 +71,7 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
 				"source1 cast(output(",
-				"          Weight as integer",
+				"          Weight as float",
 				"     ),",
 				"     errors: true) ~> cast1",
 				"select1 sink(allowSchemaDrift: true,",
