@@ -55,7 +55,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"cast1 derive(Weight = ERROR_FUNCTION('toFloat(Weight ?? __SINGLE_QUOTE__0__SINGLE_QUOTE__)')) ~> derivedColumn1",
+				"cast1 derive(Weight = toFloat(iif(isNull(Weight), 0,Weight ))) ~> derivedColumn1",
 				"derivedColumn1 select(mapColumn(",
 				"          ProductID,",
 				"          Name,",
