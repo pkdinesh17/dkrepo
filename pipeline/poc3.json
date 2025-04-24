@@ -165,7 +165,8 @@
 		],
 		"parameters": {
 			"filename": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "SaleLt.Txt"
 			},
 			"container": {
 				"type": "string",
