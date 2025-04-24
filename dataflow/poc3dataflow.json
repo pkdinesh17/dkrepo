@@ -69,7 +69,6 @@
 				"     skipDuplicateMapOutputs: true) ~> select1",
 				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     partitionFileNames:['SalesLTProduct.txt'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
