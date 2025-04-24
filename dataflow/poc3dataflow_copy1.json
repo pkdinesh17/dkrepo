@@ -30,6 +30,9 @@
 				},
 				{
 					"name": "cast1"
+				},
+				{
+					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -55,7 +58,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"cast1 derive(Weight = toFloat(iif(isNull(Weight), 0,Weight ))) ~> derivedColumn1",
+				"filter1 derive(Weight = ERROR_FUNCTION('toFloat(Weight ??, 0)')) ~> derivedColumn1",
 				"derivedColumn1 select(mapColumn(",
 				"          ProductID,",
 				"          Name,",
@@ -74,6 +77,7 @@
 				"          Weight as float",
 				"     ),",
 				"     errors: true) ~> cast1",
+				"cast1 filter(coalesce(Weight,0)) ~> filter1",
 				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
