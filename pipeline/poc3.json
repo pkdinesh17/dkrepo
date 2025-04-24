@@ -164,10 +164,6 @@
 			}
 		],
 		"parameters": {
-			"filename": {
-				"type": "String",
-				"defaultValue": "SaleLt.Txt"
-			},
 			"container": {
 				"type": "string",
 				"defaultValue": "dkdata1"
